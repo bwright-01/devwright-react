@@ -1,0 +1,501 @@
+/*
+COLOR PALETTE
+#BDEDE0 - Aero Blue
+#BBDBD1	- Opal
+#B6B8D6 - Wild Blue Yonder
+#7E78D2 - Violet Blue Crayola
+#6F58C9 - Slate Blue
+#708090 - Slategrey
+#696969 - dimgrey
+#2F42F4 - darkslategray
+*/
+/* CSS HEX */
+
+
+/* Global styles
+---------------------------*/
+
+/* Box Model Fix below should be added to all CSS */ 
+ html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+	--cg-blue: #227c9dff;
+	--light-sea-green: #17c3b2ff;
+	--maximum-yellow-red: #ffcb77ff;
+	--floral-white: #fef9efff;
+	--light-coral: #fe6d73ff;
+	--peach: #ffe2b3;
+	--pale-pink: #fed6d0;
+	--salmon-pink: #fea2a2;
+	--pink-lace: #fee0ff;
+	--greyish:  #818181;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	color: var(--greyish);
+	margin: 0; /*shold be added to all css */
+	padding: 0; /*should be added to all css */
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+
+a{
+	color: #383838;
+}
+
+a:hover{
+	color:white;
+	text-decoration:none;
+}
+
+h1{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 80px;
+	margin: 100px 0 40px;
+	line-height: 2;
+}
+
+h2{
+	font-size: 35px;
+	/*font-family: 'League Spartan', sans-serif;*/
+
+}
+
+h1, h2{
+	font-family: 'Varela Round', sans-serif;
+	/* font-weight: 400; */	
+}
+
+h3{
+	font-size:25px;
+	margin-bottom: 0px;
+}
+
+h4 {
+	margin-top: 0px;
+	padding-bottom: 13px;
+	font-size: 15px;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+.institute {
+	font-size: 20px;
+	font-style: italic;
+}
+
+.cert {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+}
+
+
+/* .main-title{ */
+	/* position: sticky; */
+	/* top: 10px; */
+/* } */
+
+.chinese{
+	font-family: 'Noto Sans SC', sans-serif;
+}
+
+.content-wrap{
+	width: 800px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+
+/* Profiles
+---------------------------*/
+header {
+	background: var(--floral-white);
+	text-align: center;
+	
+}
+
+.skills {
+	background-color: var(--pale-pink);
+}
+
+/* Projects
+---------------------------*/
+.projects {
+	background: var(--light-coral);
+	color: var(--floral-white);
+}
+
+/* Image Overlay Code
+--------------------------- */
+
+.projects .container{
+	position: relative;
+	width: 50%;
+}
+
+.projects .project-pic{
+	border: 3px solid lightslategrey;
+	border-radius: 10px;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.projects .image{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.projects .overlay{
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(254, 249, 239,.75);
+}
+
+.projects .container:hover .overlay{
+	opacity: 1;
+}
+
+.projects .text{
+	color: var(--cg-blue);
+	font-size: 20px;
+	font-weight: 600;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+
+
+	
+
+.projects .btn{
+	color: var(--cg-blue);
+	background: var(--floral-white);
+	text-decoration: none;
+	font-size: small;
+	font-family: 'Varela Round', sans-serif;
+	padding: 9px 10px 7.5px;
+	border-radius: 10px;
+	margin-bottom: 35px;
+	margin-right:15px; 
+	display: inline-block;
+	
+	/* Just enough to round out the edges
+	   Bigger the number, rounder the edges */
+	
+}
+
+.projects .btn:hover{
+	background:#ebecf0;
+
+}
+	
+.projects .btn:active{
+	background: white;
+	color: dimgrey;
+}
+
+.project-item{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.btn{
+	background: var(--cg-blue);
+	color: var(--floral-white);
+	text-decoration: none;
+	font-size: small;
+	font-family: 'Varela Round', sans-serif;
+	padding: 9px 10px 7.5px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	margin-right:15px; 
+	display: inline-block;
+	
+	/* Just enough to round out the edges
+	   Bigger the number, rounder the edges */
+	
+}
+
+.btn:hover{
+	background:var(--light-coral);
+
+}
+	
+.btn:active{
+	background: white;
+	color: dimgrey;
+}
+
+
+
+/* Work Experience
+---------------------------*/
+.work-experience {
+	background: var(--cg-blue);
+	color: var(--floral-white);
+}	
+	
+
+/* Education
+---------------------------*/
+
+/* .education {
+	background: #7e78d2;
+	color: #ffffff;
+} */
+
+/* Language
+---------------------------*/
+.language {
+	background: var(--floral-white);
+}
+
+/* Contact Info
+---------------------------*/
+footer {
+	background: var(--maximum-yellow-red);
+	text-align: center;
+}
+
+
+.contact-list{
+	list-style-type:none;
+	padding:0;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0px;
+}
+
+.contact-list a{
+	padding: 15px;
+	display: inline-block;
+}
+
+/* Style for sidebar */
+/* Modified from */
+/*https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1*/
+
+/*
+body {
+  font-family: "Lato", sans-serif;
+}
+*/
+
+.sidebar {
+  height: 100%;
+  width: 85px;
+  position: fixed;
+  z-index: 1;
+  transition: 0.5s;
+  margin-left:0px;
+  top: 0;
+  left: 0;
+  background-color: var(--peach);
+  padding-top: 60px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: var(--light-coral);
+}
+
+main .sidebar{
+  /*position: absolute*/
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.material-icons,
+.icon-text {
+  vertical-align: middle;
+}
+
+.material-icons {
+
+  margin-right: 30px
+}
+
+#main {
+  transition: margin-left 0.5s;
+  margin-left: 85px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* Style for Buttons */
+/* Modified from */
+/* https://www.sliderrevolution.com/resources/css-button-hover-effects/ */
+
+.box-contact {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contact button */
+
+.btn-contact {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  border-radius:5px;
+}
+
+.btn-contact {
+  color: white;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--cg-blue);
+  transition: all 0.3s;
+}
+.btn-contact:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid var(--cg-blue);
+  transform: scale(1.2,1.2);
+}
+.btn-contact:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+.btn-contact:hover {
+  color:var(--cg-blue);
+  transition: 0.3s;
+}
+
+/* project button */
+
+.box-project {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.btn-project {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  border-radius:5px;
+}
+
+.btn-project{
+  margin: 10px;
+  color: var(--cg-blue);
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn-project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--floral-white);
+  transition: all 0.3s;
+}
+.btn-project:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-project::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid var(--floral-white);
+  transform: scale(1.2,1.2);
+}
+.btn-project:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+.btn-project:hover {
+  color:var(--floral-white);
+  transition: 0.3s;
+}
+
+.btn-text {
+	z-index:2;
+	position: relative;
+}

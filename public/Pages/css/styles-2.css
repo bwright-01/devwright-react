@@ -1,0 +1,224 @@
+/*
+COLOR PALETTE
+#BDEDE0 - Aero Blue
+#BBDBD1	- Opal
+#B6B8D6 - Wild Blue Yonder
+#7E78D2 - Violet Blue Crayola
+#6F58C9 - Slate Blue
+#708090 - Slategrey
+#696969 - dimgrey
+#2F42F4 - darkslategray
+*/
+
+/* Global styles
+---------------------------*/
+
+/* Box Model Fix below should be added to all CSS */ 
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+	background-color: #bdede0;
+}
+
+body {	
+	color: dimgray;
+	margin: 0; /*shold be added to all css */
+	padding: 0; /*should be added to all css */
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+img {
+	width: 300px;
+}
+
+a{
+	color: #383838;
+}
+
+a:hover{
+	color:white;
+	text-decoration:none;
+}
+
+h1{
+	font-size: 80px;
+	margin: 100px 0 40px;
+	line-height: 2;
+}
+
+h2{
+	font-size: 30px;
+
+}
+
+h1, h2{
+	font-family: 'Varela Round', sans-serif;
+	/* font-weight: 400; */	
+}
+
+/* .main-title{ */
+	/* position: sticky; */
+	/* top: 10px; */
+/* } */
+
+.chinese{
+	font-family: 'Noto Sans SC', sans-serif;
+}
+
+.content-wrap{
+	width: 800px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+
+/* Profiles
+---------------------------*/
+header {
+	background: #bdede0;
+	text-align: center;
+	
+}
+
+/* Projects
+---------------------------*/
+.projects {
+	background: #bbdbd1;
+}
+
+/* Image Overlay Code
+--------------------------- */
+
+.projects .container{
+	position: relative;
+	width: 50%;
+}
+
+.projects .project-pic{
+	/* box-sizing: content-box */;
+	border: 3px solid lightslategrey;
+	border-radius: 15px 50% 50% 15px;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.projects .image{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.projects .overlay{
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 15px 50% 50% 15px;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(182, 184, 214,.75);
+}
+
+.projects .container:hover .overlay{
+	opacity: 1;
+}
+
+.projects .text{
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+
+
+	
+
+.projects .btn{
+	color: #ffffff;
+	background: #7e78d2;
+	text-decoration: none;
+	font-size: small;
+	font-family: 'Varela Round', sans-serif;
+	padding: 9px 10px 7.5px;
+	border-radius: 10px; 
+	display: inline-block;
+	
+	/* Just enough to round out the edges
+	   Bigger the number, rounder the edges */
+	
+}
+
+.projects .btn:hover{
+	background:rgba(126, 120, 210, 60%);
+
+}
+	
+.projects .btn:active{
+	background: white;
+	color: dimgrey;
+}
+
+
+/*
+.project-item{
+	oveflow: hidden;
+}
+
+.project-item img{
+	float: left;
+}
+*/
+
+
+/* Work Experience
+---------------------------*/
+.work-experience {
+	background: #b6b8d6;
+}	
+	
+
+/* Education
+---------------------------*/
+
+/* .education {
+	background: #7e78d2;
+	color: #ffffff;
+} */
+
+
+
+/* Contact Info
+---------------------------*/
+footer {
+	background: #bdede0;
+	text-align: center;
+}
+
+
+.contact-list{
+	list-style-type:none;
+	padding:0;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-list a{
+	padding: 15px;
+	display: inline-block;

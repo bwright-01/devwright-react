@@ -1,0 +1,137 @@
+
+* {
+	--cg-blue: #227c9dff;
+	--light-sea-green: #17c3b2ff;
+	--maximum-yellow-red: #ffcb77ff;
+	--floral-white: #fef9efff;
+	--light-coral: #fe6d73ff;
+	--peach: #ffe2b3;
+	--pale-pink: #fed6d0;
+	--salmon-pink: #fea2a2;
+	--pink-lace: #fee0ff;
+}
+
+.unityContainer{
+	padding-bottom: 20px;
+}
+
+h1 {
+	line-height: 48px;
+}
+
+h1 .subHeader{
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+body{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+
+}
+
+img{
+    border-width: 1;
+    flex-direction: row; 
+	border: 3px solid lightslategrey;
+	border-radius: 10px;
+	display: inline-block;
+    margin: 15px;
+}
+
+p{
+    margin-left:40px;
+    margin-right: 70px;
+}
+
+
+.btn{
+	background: var(--cg-blue);
+	color: var(--floral-white);
+	text-decoration: none;
+	font-size: small;
+	font-family: 'Varela Round', sans-serif;
+	padding: 9px 10px 7.5px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	margin-right:15px; 
+	display: inline-block;
+	
+	/* Just enough to round out the edges
+	   Bigger the number, rounder the edges */
+	
+}
+
+.btn:hover{
+	background:var(--light-sea-green);
+
+}
+	
+.btn:active{
+	background: white;
+	color: dimgrey;
+}
+.horizontal-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style for sidebar */
+/* Modified from https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp */
+
+.sidebar {
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+	background-color: #04AA6D;
+	color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+	margin-left: 200px;
+	padding: 1px 16px;
+	height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+	.sidebar {
+	  width: 100%;
+	  height: auto;
+	  position: relative;
+	}
+	.sidebar a {float: left;}
+	div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+	.sidebar a {
+	  text-align: center;
+	  float: none;
+	}
+  }

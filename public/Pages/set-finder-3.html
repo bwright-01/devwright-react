@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/project-styles.css">
+        <title>Set Finder 3.0</title>
+	    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Sans+SC&family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="build-setV3/UnityLoader.js"></script>
+        <script>
+            UnityLoader.instantiate("unityContainer", "build-setV3/Set Finder 3.1.json");
+        </script>
+    </head>
+        <body>
+        <h1>
+            Set Finder<br>
+            <div class="subHeader">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVersion 3.0</div>
+        </h1>
+        <div id="unityContainer" style="width: 700px; height: 525px; margin: auto"></div>
+        <p>
+            The rules in SET are simple, but the game itself is difficult. From a deck of 81 cards, 12 are drawn and layed
+            face up on a table. From this hand of cards, the players must try and find a 'set' of 3 cards that meets certain
+            criteria. Each card has 4 attributes, a colour, a number, a shading and a shape, and each of those attributes has
+            can take on 1 of 3 values. Colour: red, purple, green. Number: 1, 2, 3. Shading: hatched, empty, solid. Shape: 
+            diamond, oval, squiggle. A 'set' is any three cards which for every one of the four attributes, the three cards either 
+            have the same attribute values (e.g 3 cards are all green), or all different attribute values (e.g. each card has a different
+            type of shape; one is diamond, one is oval, and one is squiggly). When a player spots a set, they call out "set"
+            and then collect the three cards from the board that form the set. Three new cards are then dealt. This continues
+            until the whole deck has been dealt. At the end, whoever has found more sets wins the game. More detailed instructions
+            can be found <a href="https://www.setgame.com/sites/default/files/instructions/SET%20INSTRUCTIONS%20-%20ENGLISH.pdf" target="_blank">here</a>.
+        <p>
+            SET is a challenging game to wrap your head around at first and when playing, there is no way to check if the cards you have been 
+            dealt contain a set or not. I designed a piece of software that can interpret a set of cards and tell the players if 
+            any sets exist in the hand. This helps to keep the game going when it would otherwise come to a standstill.
+        </p>
+        <p>
+            My brother and I used to play this game a lot and we would always get frustrated when we got to a hand where we
+            we did not know if there were any sets or not. That was my motivation for developing this software.
+        </p>
+        <p>
+            My <a href="./set-finder-2.html" target="_blank">original iteration</a> of this project was a program with a command line 
+            interface. Although this worked, it forced the user to use a key to identify the ID of each card that needed to be
+            input. The results of the program were also unintuitive to read. For version 3.0, I upgraded the program from a 
+            command-line interface implemented in C++, to a GUI interface using Unity 2019. The GUI is much more intuitive than the original
+            program, as the visual nature of the game really lends itself to a visual oriented interface.
+        </p>
+        <h2>Upgraded Selection Interface</h2>
+        <img src="images/set-finder-3/card-select.png" width = "691" height = "521">
+        <p>
+            The card selection screen now allows the user to click the cards in the hand to select them. Selected cards will be greyed 
+            out to indicate that they have already been selected. The user is able to select 9, 12 or 15 cards and hit the "SET" button 
+            to check for sets. The program allows the user to deselect and reselect cards in case they clicked the wrong card. It also
+            displays the amount of cards currently selected in case the user loses track. The program will also stop the user from 
+            running the program with the incorrect amount of cards or selecting more than the maximum 15 cards.
+        </p>
+        <h2>More Intuitive Set Display</h2>
+        <img src="images/set-finder-3/view-sets.png" width = "699" height = "521">
+        <p>
+            If sets are found, the program will tell the user how many sets were found and display a "View" button. When the "View"
+            button is pressed, the first set that was found will be highlighted in blue on the board. Hitting the "View" button
+            again will display the next set. You can continue clicking until there are no more sets to display. Once sets have been
+            found, an "Again" button also appears which when clicked resets the program and allows the user to input a new hand.
+        </p>
+        <h2>No Sets Found</h2>
+        <img src="images/set-finder-3/no-sets.png" width = "697" height = "519">
+        <p>
+            If no sets are found, the program will alert the user, but it will continue to allow the user to input or change cards
+            in the hand. When playing set, if you find a hand of 12 cards has no sets, you then put down 3 more cards and continue
+            playing. In this case, if players still can't find a set in the hand, they can simply add the 3 new cards in the
+            program and recheck for sets. 
+        </p>
+		<p>
+            Code for this project is available on my github repository which can be accessed by clicking below. You can also view
+            the details of the original project "Set Finder 2.0" below.
+        </p>
+		<div class="horizontal-container">
+			<a class ="btn" href="https://github.com/bwright-01/Set-Finder-3" target="_blank">set finder 3.0 on gitHub</a>
+            <a class ="btn" href="./set-finder-2.html">set finder 2.0</a>
+			<a class ="btn" href="./index.html">home</a>
+			<a class ="btn" href="#top">back to Top</a>
+		</div>	
+    </body>
+</html>

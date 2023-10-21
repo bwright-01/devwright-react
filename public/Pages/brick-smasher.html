@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/project-styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Sans+SC&family=Varela+Round&display=swap" rel="stylesheet">
+		<title>Brick Smasher</title>
+	</head>
+	<body>
+		<h1>Brick Smasher</h1>
+		<p>
+			Brick Smasher is a simple brick smashing game, but instead of balls bouncing off bricks, they fly right through them.
+			Destroying them as they go.
+		</p>
+		<p>
+			The player uses the left and right arrow keys to control the paddle and hit the ball towards the bricks. The object 
+			of the game is to destroy all bricks before running out of lives.
+		</p>
+		<h2>Main Game</h2>
+		<img src="images/brick-smasher/brick-smasher-screen.png" width = "998" height = "828">
+		<p>
+			The paddle in the game uses different points on its hitbox as well as the ball's incoming angle to calculate a 
+			natural angle to bounce off at. For example, if the ball is coming in at a steep vertical angle towards the corner of
+			the paddle, it will bounce off at a steep horizontal angle.
+		</p>
+		<h2>Winning and Losing</h2>
+		<div class="horizontal-container">
+			<img src="images/brick-smasher/win-screen.png" height = "auto" width = "400">
+			<img src="images/brick-smasher/lose-screen.png" height = "auto" width = "400">
+		</div>
+		<p>
+			If the player hits all the bricks without losing all their lives, they will win and be asked if they want to play again.
+			If they lose all their lives before destroying all the bricks, they will lose and will also be asked if they want to
+			play again.
+		</p>
+
+		<p>Code for this project is available on my github repository which can be accessed by clicking below.</p>
+		<div class="horizontal-container">
+			<a class ="btn" href="https://github.com/bwright-01/BrickSmash" target="_blank">brick smasher on gitHub</a>
+			<a class ="btn" href="./index.html">home</a>
+			<a class ="btn" href="#top">back to Top</a>
+		</div>	
+	</body>
+<html>

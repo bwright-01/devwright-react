@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/project-styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Sans+SC&family=Varela+Round&display=swap" rel="stylesheet">
+		<title>Set Finder 2.0</title>
+	</head>
+	<body>
+        <h1>
+            Set Finder<br>
+            <div class="subHeader">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVersion 2.0</div>
+        </h1>
+		<p>
+			This program allows users to check if there are any sets in a hand of cards in the card game SET.
+		</p>
+        <p>
+            This is an older version of the GUI version Set Finder 3.0. This version uses a command line interface and a key
+            for translating cards to IDs which can then be fed into the program. 
+        </p>
+		<h2>Opening Screen</h2>
+		<img src="images/set-finder/opening-screen.png" height = "475" width = "648">
+		<p> 
+			In different circumstances, the amount of cards in a hand can vary from 9 to 15. 
+			The software allows you to account for the three different possible board layouts: 9, 12 and 15 cards.
+		</p>
+		<h2>Card Input and ID Key</h2>
+		<img src="images/set-finder/card-input-display.png" height = "467" width = "552">
+		<img src="images/set-finder/id-key.png" height = "600" width = "957">
+		<p>
+			In order to find sets, the user must input the cards that are in the hand. To make this as easy
+			as possible, I created a visual key with IDs for each card. The user will be prompted to enter each card
+			in the hand's ID before the program will check for sets.
+		</p>
+		<h2>Checking For Sets</h2>
+		<div class="horizontal-container">
+			<img src="images/set-finder/set-found-2.png" height = "auto" width = "400">
+			<img src="images/set-finder/no-sets.png" height = "auto" width = "400">
+		</div>
+		<p>
+			As stated above, each card has four attributes. In the code of the program, each attribute value is given a number
+			value of 1, 2 or 3. To check if three cards are a set, the program looks at each attribute and adds each cards
+			value for that attribute together. If the resulting values for a single attribute is 3 or 9, that indicates all 
+			the values on the cards for that attribute are the same, if the resulting value is a 6, the values are either all 
+			the same or all different for that attribute. If all attributes meet these criteria, the cards are a set. 
+		</p>
+		<p>
+			The program checks every possible combination of three cards in the user inputted hand for a set, and returns the
+			three cards that make the set if there is one. If there is more than one set, the program will display all sets. 
+			The program tells the user there is no set if no combination meets the above criteria.
+		</p>
+
+		<p>
+            Code for the most current version of this project, v3.0, is available on my github repository which can be accessed by clicking below. You can also 
+            view more information about that project by clicking below.
+        </p>
+		<div class="horizontal-container">
+			<a class ="btn" href="https://github.com/bwright-01/Set-Finder-3" target="_blank">set finder on gitHub</a>
+            <a class ="btn" href="./set-finder-3.html">set finder 3.0</a>
+			<a class ="btn" href="./index.html">home</a>
+			<a class ="btn" href="#top">back to Top</a>
+		</div>	
+	</body>
+<html>
