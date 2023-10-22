@@ -1,31 +1,19 @@
-import { Fragment } from "react";
-
-import NavCard from "./NavCard";
+import classes from './NavBar.module.css';
 
 const NavBar = (props) => {
   const clickHandler = props.onSwitch;
 
   return (
-    <Fragment>
-      <NavCard title={"Home"} name={"home"} onClick={clickHandler} />
-      <NavCard title={"Work Experience"} name={"work"} onClick={clickHandler} />
-      <NavCard title={"Projects"} name={"projects"} onClick={clickHandler} />
-      <NavCard title={"Technical Skills"} name={"skills"} onClick={clickHandler} />
-      <NavCard title={"Education"} name={"education"} onClick={clickHandler} />
-      <NavCard title={"Languages"} name={"languages"} onClick={clickHandler} />
-      <NavCard title={"Contact"} name={"contact"} onClick={clickHandler} />
-    </Fragment>
+    <div className={classes["nav-bar"]}>
+      <button onClick={clickHandler.bind(null, "home")}>Home</button>
+      <button onClick={clickHandler.bind(null, "work")} >Work Experience</button>
+      <button onClick={clickHandler.bind(null, "projects")} >Projects</button>
+      <button onClick={clickHandler.bind(null, "skills")} >Technical Skills</button>
+      <button onClick={clickHandler.bind(null, "education")} >Education</button>
+      <button onClick={clickHandler.bind(null, "languages")} >Languages</button>
+      <button onClick={clickHandler.bind(null, "contact")} >Contact</button>
+    </div >
   );
 };
-
-/*
-    home: { title: "Home", section: <Home /> },
-    work: { title: "Work Experience", section: <WorkExperience /> },
-    projects: { title: "Projects", section: <Project /> },
-    skills: {title: "Technical Skills", section: <Skills />},
-    education: {title: "Education", section: <Education />},
-    language: {title: "Language", section: <Language />},
-    contact: {title: "Contact Info", section: <Contact />}
-*/
 
 export default NavBar;

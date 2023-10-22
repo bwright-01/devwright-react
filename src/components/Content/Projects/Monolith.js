@@ -1,20 +1,6 @@
 const Monolith = () => {
   return (
-    <section className="project-item">
-      <div className="container">
-        <img
-          className="project-pic"
-          src={require("../../../images/monolith.png")}
-          alt="monolith screenshot"
-          width="300px"
-          height="300px"
-        />
-        <div className="overlay">
-          <div className="text">Monolith</div>
-        </div>
-      </div>
       <section className="project-info">
-        <h3>Monolith</h3>
         <h4>Unity 2021, C# and Aseprite</h4>
         <p>
           Monolith is a top-down action adventure game developed in under a week
@@ -34,29 +20,10 @@ const Monolith = () => {
           below.
         </p>
         <p>
-          {" "}
           Code for this project is available on github which can be accessed by
           clicking below.
         </p>
-        <br />
-        <div className="box-project">
-          <div
-            className="btn-2 btn-project"
-            onClick={()=>window.open('../../../../pages/Monolith-WebGL/index.html')}
-            style={{ cursor: "pointer" }}
-          >
-            <span className="btn-text">play</span>
-          </div>
-          <div
-            className="btn-2 btn-project"
-            onClick={()=>window.open('https://github.com/bwright-01/Monolith')}
-            style={{ cursor: "pointer" }}
-          >
-            <span className="btn-text">monolith on GitHub</span>
-          </div>
-        </div>
       </section>
-    </section>
   );
 };
 

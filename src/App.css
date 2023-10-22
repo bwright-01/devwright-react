@@ -1,5 +1,11 @@
+* {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif;*/
+}
+
 .App {
-  text-align: center;
+  text-align: left;
+  margin-left: 40px;
 }
 
 .App-logo {

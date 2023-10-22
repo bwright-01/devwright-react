@@ -3,6 +3,8 @@ import React, { useState } from "react";
 //import logo from './logo.svg';
 import "./App.css";
 
+import classes from './App.module.css';
+
 import Header from "./components/Layout/Header";
 import Section from "./components/Section/Section";
 import NavBar from "./components/NavBar/NavBar";
@@ -32,13 +34,17 @@ function App() {
     setCurrentSection(sections[name]);
   };
 
+
   return (
-    <div className="App">
-      <Header className="App-header"></Header>
-      <main>
-        <Section sectionData={currentSection} />
-      </main>
+    <div className={classes["back-container"]}>
       <NavBar onSwitch={sectionHandler} />
+      <div className={classes["general-styles"]}>
+        <Header className="App-header"></Header>
+        <main>
+          <Section sectionData={currentSection} />
+        </main>
+        
+      </div>
     </div>
   );
 }

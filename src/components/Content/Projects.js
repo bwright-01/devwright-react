@@ -1,4 +1,9 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
+
+import "./Projects.css";
+
+import ProjectPicture from "./Projects/ProjectPicture";
+import ProjectButtons from "./Projects/ProjectButtons";
 
 import ProjectsBar from "./Projects/ProjectsBar";
 import SetFinder from "./Projects/SetFinder";
@@ -13,9 +18,15 @@ const ProjectTitle = (props) => {
 
 const ProjectContent = (props) => {
     return (
-      <section>
-        <ProjectTitle name={props.projectData.title} />
-        {props.projectData.project}
+      <section className="project-container">
+        <div className="project-container-left">
+          <ProjectTitle name={props.projectData.title} />  
+          {props.projectData.project}
+        </div>
+        <div className="project-container-right">
+          <ProjectPicture name={props.projectData.title}/>
+          <ProjectButtons name={props.projectData.title}/>
+        </div>
       </section>
     );
 };
@@ -40,8 +51,8 @@ const Projects = () => {
 
   return (
     <section>
-      <ProjectContent projectData={currentProject} />
       <ProjectsBar onSwitch={projectHandler} />
+      <ProjectContent projectData={currentProject} />
     </section>
   );
 };

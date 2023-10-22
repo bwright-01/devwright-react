@@ -1,0 +1,15 @@
+.project-container {
+  display:flex;
+}
+
+.project-container-right {
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+img {
+  border-radius: 10px;
+  border-color: gainsboro;
+  border-style: solid;
+  border-width: 2px;
+}
