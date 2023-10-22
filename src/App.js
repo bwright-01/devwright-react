@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
-//import logo from './logo.svg';
 import "./App.css";
-
-import classes from './App.module.css';
 
 import Header from "./components/Layout/Header";
 import Section from "./components/Section/Section";
@@ -22,30 +19,30 @@ function App() {
     home: { title: "Home", section: <Home /> },
     work: { title: "Work Experience", section: <WorkExperience /> },
     projects: { title: "Projects", section: <Projects /> },
-    skills: {title: "Technical Skills", section: <Skills />},
-    education: {title: "Education", section: <Education />},
-    languages: {title: "Languages", section: <Languages />},
-    contact: {title: "Let's Keep in Touch!", section: <Contact />}
+    skills: { title: "Technical Skills", section: <Skills /> },
+    education: { title: "Education", section: <Education /> },
+    languages: { title: "Languages", section: <Languages /> },
+    contact: { title: "Let's Keep in Touch!", section: <Contact /> },
   };
 
-  const [currentSection, setCurrentSection] = useState(sections.home);
+  const [currentSection, setCurrentSection] = useState(sections.projects);
 
   const sectionHandler = (name) => {
     setCurrentSection(sections[name]);
   };
 
-
   return (
-    <div className={classes["back-container"]}>
-      <NavBar onSwitch={sectionHandler} />
-      <div className={classes["general-styles"]}>
-        <Header className="App-header"></Header>
+  <Fragment>
+    <Header />
+    <div id="back-container" className="back-container">
+      <NavBar onSwitch={sectionHandler}/>
+      <div className="general-styles">
         <main>
           <Section sectionData={currentSection} />
         </main>
-        
       </div>
     </div>
+    </Fragment>
   );
 }
 

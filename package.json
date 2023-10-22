@@ -1,4 +1,6 @@
 {
+  "homepage" : "https://devwright.net/",
+  "build_staging": "PUBLIC_URL=https://devwright.net/ react-scripts build",
   "name": "devwright-react",
   "version": "0.1.0",
   "private": true,

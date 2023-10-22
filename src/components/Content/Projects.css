@@ -2,14 +2,24 @@
   display:flex;
 }
 
-.project-container-right {
-  margin-right: 100px;
-  margin-left: 50px;
+.project-container-left {
+  margin-right: 200px;
 }
 
+
+
 img {
+  position: absolute;
+  right: 10px;
+  bottom: -100px;
   border-radius: 10px;
-  border-color: gainsboro;
-  border-style: solid;
-  border-width: 2px;
+  opacity: .08;
+
+
+}
+
+.project-title {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 5px;
 }

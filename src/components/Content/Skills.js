@@ -19,11 +19,11 @@ const Skills = () => {
       </li>
       <li>Proficient in Python, Java and C programming languages.</li>
       <li>
-        Experience with frontend webdesign including HTML, CSS, JavaScript from
+        Experience with frontend webdesign including ReactJS, HTML, CSS, JavaScript from
         course work and personal projects.
       </li>
       <li>
-        Comfortable with backend webdesign including MySQL, MongoDB and PHP from
+        Comfortable with databases and other backend technologies: MySQL, MongoDB and PHP from 
         course work and personal projects.
       </li>
     </ul>

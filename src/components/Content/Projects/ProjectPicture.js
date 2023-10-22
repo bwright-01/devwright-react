@@ -10,11 +10,11 @@ const ProjectPicture = (props) => {
       title: "Set Finder",
       source: setFinderImage,
     },
-    Gravitron: {
+    "Gravitron": {
       title: "Gravitron",
       source: gravitronImage,
     },
-    Monolith: { title: "Monolith", source: monolithImage },
+    "Monolith": { title: "Monolith", source: monolithImage },
     "Brick Smasher": {
       title: "Brick Smasher",
       source: brickSmasherImage,
@@ -30,8 +30,8 @@ const ProjectPicture = (props) => {
       className="project-pic"
       src={pictures[props.name].source}
       alt={pictures[props.name].title}
-      width="300px"
-      height="300px"
+      width="650px"
+      height="650px"
     />
   );
 };

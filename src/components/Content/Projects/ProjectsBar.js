@@ -4,15 +4,20 @@ import "./ProjectsBar.css";
 const ProjectsBar = (props) => {
   const clickHandler = props.onSwitch;
 
-  return (
-    <div className="projects-bar">
-      <button onClick={clickHandler.bind(null, "setFinder")}>Set Finder</button>
-      <button onClick={clickHandler.bind(null, "gravitron")}>Gravitron</button>
-      <button onClick={clickHandler.bind(null, "monolith")}>Monolith</button>
-      <button onClick={clickHandler.bind(null, "brickSmasher")}>Brick Smasher</button>
-      <button onClick={clickHandler.bind(null, "email")}>Email Trainer</button>
+  const projects = [
+    "Set Finder", "Gravitron", "Monolith", "Brick Smasher", "Email Trainer"
+  ];
+
+  var id = 0;
+
+  const buttonList = projects.map((project) => (
+    <div key={id++} className="btn-project" onClick={clickHandler.bind(null, project)} style={{cursor:"pointer"}}>
+      <span className="btn-text">{project}</span>
     </div>
-  );
+  ));
+
+  return <div className="buttons-bar">{buttonList}</div>;
+  
 };
 
 

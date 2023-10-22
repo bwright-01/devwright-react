@@ -13,19 +13,20 @@ import BrickSmasher from "./Projects/BrickSmasher";
 import EmailTrainer from "./Projects/EmailTrainer";
 
 const ProjectTitle = (props) => {
-  return <h3>{props.name}</h3>;
+  return <h3 className="project-title">{props.name}</h3>;
 };
 
 const ProjectContent = (props) => {
     return (
       <section className="project-container">
         <div className="project-container-left">
-          <ProjectTitle name={props.projectData.title} />  
+          <ProjectsBar onSwitch={props.onSwitch} />
+          <ProjectTitle name={props.projectData.title} />
+          <ProjectButtons name={props.projectData.title}/>  
           {props.projectData.project}
         </div>
         <div className="project-container-right">
           <ProjectPicture name={props.projectData.title}/>
-          <ProjectButtons name={props.projectData.title}/>
         </div>
       </section>
     );
@@ -33,11 +34,11 @@ const ProjectContent = (props) => {
 
 const Projects = () => {
   const projects = {
-    setFinder: { title: "Set Finder", project: <SetFinder /> },
-    gravitron: { title: "Gravitron", project: <Gravitron /> },
-    monolith: { title: "Monolith", project: <Monolith /> },
-    brickSmasher: { title: "Brick Smasher", project: <BrickSmasher /> },
-    email: { title: "Email Trainer", project: <EmailTrainer /> },
+    "Set Finder": { title: "Set Finder", project: <SetFinder /> },
+    "Gravitron": { title: "Gravitron", project: <Gravitron /> },
+    "Monolith": { title: "Monolith", project: <Monolith /> },
+    "Brick Smasher": { title: "Brick Smasher", project: <BrickSmasher /> },
+    "Email Trainer": { title: "Email Trainer", project: <EmailTrainer /> },
   };
 
   const [currentProject, setCurrentProject] = useState({
@@ -51,8 +52,7 @@ const Projects = () => {
 
   return (
     <section>
-      <ProjectsBar onSwitch={projectHandler} />
-      <ProjectContent projectData={currentProject} />
+      <ProjectContent projectData={currentProject} onSwitch={projectHandler}/>
     </section>
   );
 };

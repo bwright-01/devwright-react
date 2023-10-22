@@ -74,8 +74,12 @@ const ProjectButtons = (props) => {
     ],
   };
 
+  var id = 0;
+
   const buttonList = buttons[props.name].map((button) => (
-    <button onClick={button.onClick}>{button.text}</button>
+    <div key={id++} className="btn-project" onClick={button.onClick} style={{cursor:"pointer"}}>
+      <span className="btn-text">{button.text}</span>
+    </div>
   ));
 
   return <div className="buttons-bar">{buttonList}</div>;

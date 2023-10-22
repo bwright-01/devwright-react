@@ -1,13 +1,27 @@
-.buttons-bar {
+* {
+	--cg-blue: #227c9dff;
+	--light-sea-green: #17c3b2ff;
+	--maximum-yellow-red: #ffcb77ff;
+	--floral-white: #fef9efff;
+	--light-coral: #fe6d73ff;
+	--peach: #ffe2b3;
+	--pale-pink: #fed6d0;
+	--salmon-pink: #fea2a2;
+	--pink-lace: #fee0ff;
+}
+
+/*.buttons-bar {
   margin: 0;
   margin-top: 5px;
   padding: 0;
   position: block;
   overflow: auto;
   display:flex;
+  flex-direction: column;
   
-}
+}*/
 
+/*
 .buttons-bar button {
   border-color: gainsboro;
   border-style: solid;
@@ -26,4 +40,86 @@
 .buttons-bar button:hover {
   transition-duration: .2s;
   background: rgba(0, 0, 0, .4);
+}
+*/
+
+
+/* Style for Buttons */
+/* Modified from */
+/* https://www.sliderrevolution.com/resources/css-button-hover-effects/ */
+
+/* project button */
+
+.buttons-bar {
+  margin-top: 18px;
+  padding-bottom: 15px;
+  height: 25px;
+  width: 70%; 
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.btn-project {
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+}
+
+.btn-project{
+  margin: 15px;
+  margin-right: 25px;
+  margin-left:0;
+  color: #322D4E;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn-project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(224, 225, 245, .4);
+  transition: all 0.3s;
+  border-left: 3px solid #322D4E;
+  box-shadow: 5px 5px 5px rgba(25, 22, 39, 0.5);
+}
+.btn-project:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-project::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid #E0E1F5;
+  transform: scale(1.2,1.2);
+}
+.btn-project:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+.btn-project:hover {
+  color:#E0E1F5;
+  transition: 0.3s;
+}
+
+.btn-text {
+	z-index:2;
+	position: relative;
 }

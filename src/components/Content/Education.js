@@ -4,8 +4,8 @@ const Education = () => {
   return (
     <Fragment>
       <section>
-        <h2 className="cert">Bachelor of Computer Science with Honours</h2>
-        <h3 className="institute">Saint Mary's University - Halifax, Canada</h3>
+        <h3 className="cert">Bachelor of Computer Science with Honours</h3>
+        <h4 className="institute">Saint Mary's University - Halifax, Canada</h4>
         <ul>
           <li>
             Graduated <em>summa cum laude</em>.
@@ -15,12 +15,12 @@ const Education = () => {
       </section>
       <br />
       <section>
-        <h2 className="cert">
+        <h3 className="cert">
           Certificate of Completion of Intensive Mandarin Training
-        </h2>
-        <h3 className="institute">
-          International Center of HIT - Harbin, China
         </h3>
+        <h4 className="institute">
+          International Center of HIT - Harbin, China
+        </h4>
         <ul>
           <li>
             Completed 3 semesters of intensive Mandarin language training (20

@@ -1,44 +1,136 @@
-* {
+.app-header {
+  position: absolute;
+  width: 100vw;
+  z-index: 2;
+  padding: 15px;
+  padding-bottom: 45px;
+  padding-left: 30px;
+  height: 20px;
+  background:#211E34;
+  color: #8D86C9;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(25, 22, 39, 0.6);
+}
+
+
+
+.back-container {
+  background: linear-gradient(-45deg, #F76C5E, #9067C6, #F76C5E);
+  background-size: 400% 400%;
+  position: fixed;
+  animation: gradient 14s ease infinite;
+  height: 100vh;
+  width: 100vw;
+}
+
+.general-styles {
   font-family: 'Atkinson Hyperlegible', sans-serif;
   /* font-family: 'Ubuntu', sans-serif;*/
-}
-
-.App {
-  text-align: left;
+  margin-top: 100px;
   margin-left: 40px;
+  color: #231E34;
+  font-size: 18px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h4 {
+  font-size: medium;
+  font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Style for sidebar */
+/* Modified from */
+/*https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1*/
+
+/*
+body {
+  font-family: "Lato", sans-serif;
+}
+*/
+
+.sidebar {
+  height: 100%;
+  width: 85px;
+  position: fixed;
+  z-index: 1;
+  transition: 0.5s;
+  margin-left:0px;
+  top: 0;
+  left: 0;
+  background-color: #322D4E;
+  padding-top: 100px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.sidebar a {
+  cursor:pointer; 
+  transition:.2s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #8D86C9;
+  display: block;
+}
+
+.sidebar a:hover {
   color: white;
+  transition:.3s;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+.back-contianer .sidebar{
+  /*position: absolute*/
+  top: 0;
+  right: 25px;
+  font-size: 36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.material-icons,
+.icon-text {
+  vertical-align: middle;
+}
+
+.material-icons {
+
+  margin-right: 30px
+}
+
+#back-container {
+  transition: margin-left 0.5s;
+  margin-left: 85px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar a {
+    font-size: 18px;
   }
 }
